@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogen Admin</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+
+    <!-- CKEditor CDN -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.ckeditor.com/ckeditor5/43.3.1/ckeditor5.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.ckeditor.com/ckeditor5-premium-features/43.3.1/ckeditor5-premium-features.css"
+    />
+
+    <!-- add jquery link -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
+    <!-- bootstrap Icons -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <!-- CDN LINK -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+      <div class="container">
+        <!-- container navbar -->
+        <a href="index.html" class="navbar-brand">Blogen</a>
+
+        <!-- logo navbar -->
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- section navbar -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <!-- For Bootstrap-5 we have to use ms-auto instead of ml-auto -->
+          <ul class="navbar-nav">
+            <li class="nav-item px-2">
+              <a href="index.html" class="nav-link">Dashboard</a>
+            </li>
+            <li class="nav-item px-2">
+              <a href="posts.html" class="nav-link">Posts</a>
+            </li>
+            <li class="nav-item px-2">
+              <a href="categories.html" class="nav-link">Categories</a>
+            </li>
+            <li class="nav-item px-2">
+              <a href="users.html" class="nav-link">Users</a>
+            </li>
+          </ul>
+
+          <!-- For Bootstrap-5 we have to use ms-auto instead of ml-auto -->
+          <ul class="dropdown navbar-nav ms-auto">
+            <!-- navbar dropdown -->
+            <a
+              href=""
+              id="dropdownMenulink"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="bi bi-person-fill"></i> <small>Welcome Marthe</small>
+            </a>
+
+            <!-- start of dropdrown -->
+            <div class="dropdown-menu" aria-labelledby="dropdownMenulink">
+              <!-- dropdown 1 -->
+              <li>
+                <a href="profile.html" class="dropdown-item">
+                  <i class="bi bi-person-circle"></i> Profile
+                </a>
+              </li>
+              <!-- dropdown 2 -->
+              <li>
+                <a href="settings.html" class="dropdown-item">
+                  <i class="bi bi-gear-fill"></i> Settings
+                </a>
+              </li>
+              <!-- end of dropdown -->
+            </div>
+            <!-- end lu navbar -->
+          </ul>
+
+          <!-- logout profile -->
+
+          <a href="login.html" class="nav-link">
+            <i class="bi bi-person"></i>Logout
+          </a>
+
+          <!-- end of logout profile -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="main-header" class="py-2 bg-primary text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1><i class="bi bi-gear-fill"></i>Settings</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ACTIONS -->
+    <section id="actions" class="py-4 mb-4 bg-light">
+      <div class="container">
+        <div class="row">
+          <!-- col 1 -->
+          <div class="col-md-3">
+            <a href="index.html" class="btn btn-light btn-block"
+              ><i class="bi bi-arrow-left"></i> Back to Dashboard
+            </a>
+          </div>
+          <!-- col 2 -->
+          <div class="col-md-3">
+            <a href="index.html" class="btn btn-success btn-block"
+              ><i class="bi bi-check"></i>
+              Save Changes
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  SETTINGS -->
+    <section id="settings">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-header">
+                <h4>Edit Settings</h4>
+              </div>
+              <div class="card-body">
+                <form>
+                  <!--  -->
+                  <fieldset class="form-group">
+                    <legend>Allow User Registration</legend>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          value="Yes"
+                          checked
+                        />
+                        Yes
+                      </label>
+                    </div>
+
+                    <!--  -->
+
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          value="No"
+                        />
+                        No
+                      </label>
+                    </div>
+                  </fieldset>
+
+                  <!--  -->
+
+                  <fieldset class="form-group">
+                    <legend>HomePage Format</legend>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          value="posts"
+                          checked
+                        />
+                        Blog Page
+                      </label>
+                    </div>
+
+                    <!--  -->
+
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          value="page"
+                        />
+                        HomePage
+                      </label>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="main-footer" class="bg-dark text-white text-center mt-5 p-5">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p>Copyright &copy; <span id="year"></span>Blogen</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script>
+
+    <!-- CKEditor 5 is a powerful, rich text editor you can embed in your web application. This guide will show you the fastest way to start using it. -->
+    <!-- documentation of CKEditor link -->
+    <!-- https://ckeditor.com/docs/ckeditor5/latest/getting-started/installation/quick-start.html#installing-ckeditor-5-from-cdn -->
+
+    <!-- ckeditor CDN link -->
+
+    <script type="importmap">
+      {
+        "imports": {
+          "ckeditor5": "https://cdn.ckeditor.com/ckeditor5/43.3.1/ckeditor5.js",
+          "ckeditor5/": "https://cdn.ckeditor.com/ckeditor5/43.3.1/",
+          "ckeditor5-premium-features": "https://cdn.ckeditor.com/ckeditor5-premium-features/43.3.1/ckeditor5-premium-features.js",
+          "ckeditor5-premium-features/": "https://cdn.ckeditor.com/ckeditor5-premium-features/43.3.1/"
+        }
+      }
+    </script>
+
+    <script type="module">
+      import {
+        ClassicEditor,
+        Essentials,
+        Bold,
+        Italic,
+        Font,
+        Paragraph,
+      } from "ckeditor5";
+
+      ClassicEditor.create(document.querySelector("#editor1"), {
+        plugins: [Essentials, Bold, Italic, Font, Paragraph],
+        toolbar: [
+          "undo",
+          "redo",
+          "|",
+          "bold",
+          "italic",
+          "|",
+          "fontSize",
+          "fontFamily",
+          "fontColor",
+          "fontBackgroundColor",
+        ],
+      })
+        .then(/* ... */)
+        .catch(/* ... */);
+    </script>
+
+    <!-- 
+    <script src="https://cdn.ckeditor.com/4.25.0-lts/standard/ckeditor.js"></script> -->
+
+    <script>
+      //get the current year for the copyright
+      // $("#year").text(new Date().getFullYear);
+
+      // CKEDITOR.replace("editor1");
+
+      $(document).ready(function () {});
+    </script>
+  </body>
+</html>
