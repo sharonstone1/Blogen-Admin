@@ -1,6 +1,6 @@
 # THIS IS A SIMPLE DASHBOARD PROJECT
 
-###BLOGEN ADMIN PROJECT
+## BLOGEN ADMIN PROJECT
 
 The purpose of this project is to learn how to build a simple dashboard using Bootstrap 5 components such as cards and icons, along with CKEditor for text editing.
 
